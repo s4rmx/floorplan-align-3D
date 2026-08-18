@@ -35,9 +35,6 @@ mast3r_frames/
 *.mp4
 *.insv
 
-# Docs build artifacts
-docs/technical_report.pdf
-
 # IDE / OS
 .vscode/
 .idea/
