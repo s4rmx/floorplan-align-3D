@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Pipeline outputs (large binary artifacts)
+stella_pipeline/outputs/*
+!stella_pipeline/outputs/.gitkeep
+
+# Local pipeline config (contains machine-specific absolute paths)
+stella_pipeline/config/pipeline.yaml
+
+# MASt3R third-party and cache
+third_party/
+mast3r_cache*/
+mast3r_frames/
+
+# Data and model weights (too large for git)
+*.pt
+*.pth
+*.onnx
+*.ply
+*.db
+*.npy
+*.mp4
+*.insv
+
+# Docs build artifacts
+docs/technical_report.pdf
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

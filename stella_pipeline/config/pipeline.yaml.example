@@ -1,0 +1,28 @@
+# ── Stella Dense → Floorplan Pipeline Config ────────────────────────────────
+# Copy this file to pipeline.yaml and fill in paths for your machine.
+# Do NOT commit pipeline.yaml — it contains local absolute paths.
+
+stella_image: stella_vslam_dense                         # Docker image name
+stella_root: /path/to/stella-vslam-dense/stella_vslam_dense
+stella_data: /path/to/stella-vslam-dense/data
+stella_yaml: /stella/example/dense/dense_batch_1920.yaml # path inside container
+stella_vocab: /data/orb_vocab.fbow                       # path inside container
+
+equirect_src: /path/to/your/video.mp4                    # 360° equirectangular source
+equirect_size: "1920x960"
+frame_step: 2
+
+imu_default: /path/to/imu.csv
+floorplan_default: /path/to/floorplan.png
+
+bev_res_m: 0.05
+bev_height_min_m: 0.3
+bev_height_max_m: 2.5
+bev_flip_x: true
+ransac_iters: 2000
+confidence_min: 0.30
+
+sam3_roof: true
+sam3_roof_frames: 20
+sam3_image: sam3-pipeline:latest                         # Docker image for SAM3
+sam3_ckpt: /path/to/sam3.pt                              # SAM3 checkpoint weights

@@ -1,0 +1,7 @@
+numpy
+opencv-contrib-python
+scipy
+matplotlib
+pillow
+pyyaml
+open3d
